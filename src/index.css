@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --bg: #f8f5ef;
+  --bg-elevated: #fffdf9;
+  --text-strong: #1f2d2a;
+  --text-soft: #546763;
+  --text-muted: #6f807b;
+  --accent: #3f6f67;
+  --accent-soft: #d6e8e0;
+  --warm-accent: #c89470;
+  --gradient-soft: #7aa89d;
+  --gradient-warm: #d5ae8b;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-soft: rgba(244, 250, 247, 0.88);
+  --surface-button: rgba(255, 255, 255, 0.72);
+  --surface-pill: rgba(255, 255, 255, 0.68);
+  --surface-tag: rgba(245, 248, 246, 0.95);
+  --header-bg: rgba(248, 245, 239, 0.75);
+  --nav-hover: rgba(255, 255, 255, 0.8);
+  --nav-active: rgba(183, 215, 201, 0.28);
+  --border-soft: rgba(75, 100, 93, 0.12);
+  --border-strong: rgba(75, 100, 93, 0.14);
+  --border-hover: rgba(75, 100, 93, 0.18);
+  --shadow-soft: 0 10px 24px rgba(46, 58, 54, 0.04);
+  --shadow-medium: 0 12px 30px rgba(46, 58, 54, 0.05);
+  --shadow-card: 0 18px 45px rgba(46, 58, 54, 0.06);
+  --shadow-hover: 0 22px 50px rgba(46, 58, 54, 0.08);
+  --shadow-header: 0 14px 40px rgba(46, 58, 54, 0.05);
+  --shadow-accent: 0 16px 28px rgba(63, 111, 103, 0.18);
+  --shadow-accent-hover: 0 20px 34px rgba(63, 111, 103, 0.24);
+  --grid-color: rgba(59, 88, 80, 0.05);
+  --grid-mask: rgba(0, 0, 0, 0.22);
+  --glow-green: rgba(183, 215, 201, 0.6);
+  --glow-warm: rgba(233, 205, 184, 0.55);
+  --selection: rgba(63, 111, 103, 0.18);
+  --scrollbar-track: #f1ece4;
+  --scrollbar-thumb: #c8d6d1;
+  --bg-gradient:
+    radial-gradient(circle at top left, rgba(214, 232, 224, 0.85), transparent 32%),
+    radial-gradient(circle at 85% 10%, rgba(233, 205, 184, 0.55), transparent 28%),
+    linear-gradient(180deg, #f8f5ef 0%, #f7f3ed 100%);
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101715;
+  --bg-elevated: #16201d;
+  --text-strong: #edf4f1;
+  --text-soft: #afc2bb;
+  --text-muted: #8da098;
+  --accent: #86b2a7;
+  --accent-soft: rgba(134, 178, 167, 0.18);
+  --warm-accent: #d7aa83;
+  --gradient-soft: #86b2a7;
+  --gradient-warm: #d7aa83;
+  --surface: rgba(19, 28, 25, 0.8);
+  --surface-strong: rgba(24, 35, 31, 0.96);
+  --surface-soft: rgba(28, 41, 37, 0.92);
+  --surface-button: rgba(21, 32, 28, 0.88);
+  --surface-pill: rgba(24, 37, 33, 0.8);
+  --surface-tag: rgba(24, 36, 32, 0.94);
+  --header-bg: rgba(16, 23, 21, 0.78);
+  --nav-hover: rgba(26, 39, 35, 0.92);
+  --nav-active: rgba(134, 178, 167, 0.16);
+  --border-soft: rgba(134, 178, 167, 0.16);
+  --border-strong: rgba(134, 178, 167, 0.2);
+  --border-hover: rgba(134, 178, 167, 0.28);
+  --shadow-soft: 0 12px 28px rgba(0, 0, 0, 0.18);
+  --shadow-medium: 0 14px 32px rgba(0, 0, 0, 0.22);
+  --shadow-card: 0 22px 48px rgba(0, 0, 0, 0.24);
+  --shadow-hover: 0 26px 56px rgba(0, 0, 0, 0.28);
+  --shadow-header: 0 16px 42px rgba(0, 0, 0, 0.24);
+  --shadow-accent: 0 16px 28px rgba(134, 178, 167, 0.16);
+  --shadow-accent-hover: 0 20px 34px rgba(134, 178, 167, 0.2);
+  --grid-color: rgba(141, 160, 152, 0.08);
+  --grid-mask: rgba(0, 0, 0, 0.42);
+  --glow-green: rgba(95, 133, 124, 0.34);
+  --glow-warm: rgba(157, 108, 73, 0.22);
+  --selection: rgba(134, 178, 167, 0.22);
+  --scrollbar-track: #13201c;
+  --scrollbar-thumb: #365148;
+  --bg-gradient:
+    radial-gradient(circle at top left, rgba(56, 83, 75, 0.36), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgba(122, 87, 60, 0.18), transparent 26%),
+    linear-gradient(180deg, #101715 0%, #0c1110 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg-gradient);
+  color: var(--text-strong);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 220ms ease, color 220ms ease, background 220ms ease;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--selection);
+  color: var(--text-strong);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+  border: 2px solid var(--scrollbar-track);
+}
