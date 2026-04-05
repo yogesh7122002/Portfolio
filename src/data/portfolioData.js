@@ -27,7 +27,7 @@ export const socials = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/yogesh7122002",
+    href: "https://github.com/YogeshDeshmane07",
   },
   {
     label: "LeetCode",
