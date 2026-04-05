@@ -5,7 +5,7 @@ export default function HighlightsSection({ education, highlights }) {
     <section className="section">
       <div className="container split-grid">
         <Reveal>
-          <article className="info-card">
+          <article className="info-card info-card-education">
             <span className="section-eyebrow">{education.eyebrow}</span>
             <h3>{education.title}</h3>
             <p>{education.institute}</p>
@@ -17,7 +17,7 @@ export default function HighlightsSection({ education, highlights }) {
         </Reveal>
 
         <Reveal delay={100}>
-          <article className="info-card">
+          <article className="info-card info-card-highlights">
             <span className="section-eyebrow">{highlights.eyebrow}</span>
             <h3>{highlights.title}</h3>
             <ul className="simple-list">

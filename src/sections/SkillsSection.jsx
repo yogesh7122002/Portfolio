@@ -17,7 +17,10 @@ export default function SkillsSection({ sectionContent, groups }) {
           {groups.map((group, index) => (
             <Reveal key={group.title} delay={index * 70}>
               <article className="skill-card">
-                <h3>{group.title}</h3>
+                <div className="skill-card-head">
+                  <h3>{group.title}</h3>
+                  <span className="skill-count">{group.items.length} skills</span>
+                </div>
                 <div className="tag-list">
                   {group.items.map((item) => (
                     <span key={item} className="tag">
